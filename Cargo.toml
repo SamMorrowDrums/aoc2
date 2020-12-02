@@ -1,10 +1,6 @@
-[package]
-name = "aoc2"
-version = "0.1.0"
-authors = ["Sam Morrow <info@sammorrowdrums.com>"]
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-combinations = "0.1.0"
+[workspace]
+members = [
+    "utils",
+    "day1",
+    "day2",
+]
