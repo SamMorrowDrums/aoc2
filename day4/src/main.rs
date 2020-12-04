@@ -2,7 +2,6 @@
 extern crate lazy_static;
 use regex::Regex;
 use std::collections::HashMap;
-use std::vec;
 use utils::read_file;
 
 const REQUIRED_KEYS: [&str; 7] = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
@@ -72,10 +71,8 @@ fn validate_hair_color(n: &String) -> bool {
 }
 
 fn validator2(item: &HashMap<String, String>) -> bool {
-    for key in &REQUIRED_KEYS {
-        if !item.contains_key(*key) {
-            return false;
-        }
+    if !validator(item) {
+        return false;
     }
 
     let byr = item.get("byr").unwrap();
