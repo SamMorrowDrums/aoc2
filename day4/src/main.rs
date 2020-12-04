@@ -35,7 +35,6 @@ fn main() {
     let x = parse(&contents, &validator);
     println!("Total valid passports {:?}", x.len());
     let x = parse(&contents, &validator2);
-    println!("Total fully valid passports {:?}", x);
     println!("Total fully valid passports {:?}", x.len());
 }
 
